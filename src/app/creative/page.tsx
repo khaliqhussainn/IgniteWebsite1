@@ -20,7 +20,7 @@ function creative() {
               <Image src={samia} alt="James Newton" />
             </div>
             <a
-              href="https://www.instagram.com/samia_abid/profilecard/?igsh=Mm8xcTFqY2EyNGJy"
+              href="https://www.instagram.com/_samia_abid_/profilecard/?igsh=MTR1bTY2b3h2YThqMw=="
               className="social-icon"
             >
               <SlSocialInstagram style={{ color: "white" }} size={20} />
