@@ -1,0 +1,360 @@
+.team-main {
+  min-height: 200vh;
+}
+
+.team-main a {
+  text-decoration: none;
+}
+
+.team-main img {
+  max-width: 100%;
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+}
+
+.team-main section {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding-block: min(20vh, 5rem);
+  text-align: center;
+  width: calc(min(90rem, 90%));
+  margin-inline: auto;
+
+  p,
+  h2,
+  h3 {
+    letter-spacing: 0.035rem;
+  }
+
+  p {
+    line-height: 1.7;
+    color: #454545;
+    max-width: 70rem;
+    margin: 0 auto;
+    font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+  }
+
+  h2 {
+    font-size: clamp(3rem, 2.4286rem + 2.2857vw, 5rem);
+    color: #c92842;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .cards {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+    gap: 40px;
+    .card {
+      position: relative;
+      text-align: left;
+
+      .social-icon {
+        background: #111;
+        padding: 1rem 1.75rem;
+        display: inline-block;
+        margin-right: 5px;
+        position: absolute;
+
+        i {
+          color: #fff;
+          font-size: 1.4rem;
+        }
+
+        &:hover i {
+          color: #003ef5;
+        }
+      }
+
+      img {
+        /* filter: grayscale(100%); */
+        transition: 0.5s ease;
+
+        /* &:hover {
+          filter: grayscale(0%);
+        } */
+      }
+
+      .card-content-wrapper {
+        margin-left: auto;
+        max-width: 90%;
+
+        .card-content {
+          display: block;
+          background: white;
+          transition: 0.5s ease;
+          padding: 4.5rem 2rem 0 3.2rem;
+
+          > div {
+            text-align: right;
+          }
+
+          h3,
+          p {
+            text-transform: capitalize;
+          }
+
+          h3 {
+            font-size: clamp(1.15rem, 1.1071rem + 0.1714vw, 1.3rem);
+            font-weight: 800;
+            color: #111;
+          }
+          p {
+            color: #454545;
+            font-size: 0.9rem;
+          }
+
+          svg {
+            display: inline-block;
+            text-align: right;
+            width: 60px;
+            color: #003ef5;
+          }
+        }
+      }
+
+      /*hover states*/
+      .card-img-wrapper:hover ~ .card-content-wrapper .card-content {
+        background: #003ef5;
+
+        h3,
+        p,
+        svg {
+          color: #fff;
+        }
+      }
+
+      .card-content-wrapper:hover .card-content {
+        background: #003ef5;
+
+        h3,
+        p,
+        svg {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.socials-icons {
+  background: #111;
+  padding: 1rem 1.75rem;
+  color: white;
+  position: absolute;
+  left: 80px;
+  text-align: center;
+}
+
+/* .social-icons svg {
+  display: inline-block;
+  text-align: right;
+  width: 60px;
+  color: #003ef5;
+} */
+
+
+/* components/MarqueeImage.module.css */
+/* .marqueeContainer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.image {
+  display: inline-block;
+} */
+
+
+.marquee {
+  --duration: 20s;
+  --space: 30px;
+  --gap: var(--space);
+
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  margin-bottom: 80px;
+}
+
+.marquee__inner {
+  display: flex;
+  gap: var(--gap);
+  width: calc(200% + var(--gap)); /* To fit both groups */
+  animation: scroll var(--duration) linear infinite;
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+.marquee__group .image {
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 1rem;
+  height: 250px;
+  width: 250px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+
+@media (max-width: 1200px) {
+  .marquee__group .image {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee__group .image {
+    height: 150px;
+    width: 150px;
+  }
+  .marquee__group{
+    justify-content: space-between;
+    max-width: 90%;
+  }
+  .two{
+    display: none;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .marquee {
+    --duration: 30s; 
+  }
+
+  .marquee__group .image {
+    height: 100px;
+    width: 100px;
+  }
+  .marquee__group{
+    justify-content: space-between;
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+} 
+
+
+ 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #be1934e8;
+  padding-inline: 30px;
+  border-radius: 4%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 50px;
+}
+
+.contact-input {
+  width: 100%;
+  font-size: 24px;
+  color: black;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  background: none;
+}
+
+.contact-img{
+  width: 70%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.contact-title{
+  font-size: 40px;
+    color: #c92842;
+}
+
+
+/* 5 */
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: white;
+  background: linear-gradient(0deg, rgb(173 23 47) 0%, rgb(173 23 47) 100%);
+  margin-bottom: 30px;
+}
+.btn-5:hover {
+  color: #fff;
+  background: transparent;
+  box-shadow: none;
+}
+.btn-5:before,
+.btn-5:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
