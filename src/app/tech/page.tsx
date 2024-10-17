@@ -319,7 +319,7 @@ function Tech() {
             </a>
             <div className="card-content-wrapper">
               <a href="#" className="card-content">
-                <h3>Aisha Bano</h3>
+                <h3>Habiba Shahid</h3>
                 <p>Btech CSE (1st year)</p>
                 <div>
                   <svg
