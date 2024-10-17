@@ -165,7 +165,7 @@ export default function Home() {
             such as Research and Innovation, Startup Culture, Project
             Development, Networking, Learning Exposures, Nukkad-Natak, Cultural
             Activities, Literature-Based Activities, Medical and Pharmaceutical
-            Fields and many more
+            Fields and many more.
           </q>
         </div>
 
