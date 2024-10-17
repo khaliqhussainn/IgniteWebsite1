@@ -32,9 +32,9 @@ import collab17 from "../assets/collaborators/america center.jpg";
 import collab18 from "../assets/collaborators/satyarth.jpg";
 import collab19 from "../assets/collaborators/WhatsApp Image 2024-10-15 at 23.31.42_998407a3.jpg";
 import collab20 from "../assets/collaborators/WhatsApp Image 2024-10-16 at 09.31.54_414340bd.jpg";
+import mascot from "../assets/mascott.png"
 
 import "./team.css";
-
 export default function Home() {
   async function handleSubmit(event: any) {
     event.preventDefault();
@@ -75,7 +75,7 @@ export default function Home() {
             </h4>
 
             {/* btn */}
-            <div className="flex mt-4 gap-5">
+            {/* <div className="flex mt-4 gap-5">
               <button className="rounded-full capitalize-full px-5 p-2 text-white bg-gradient-to-r from-[#C92842] via-[#EF4136] to-[#FE7136]">
                 signup
               </button>
@@ -84,7 +84,7 @@ export default function Home() {
                   log in
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex-1 flex justify-center ">
@@ -95,11 +95,11 @@ export default function Home() {
         {/* about us container */}
         <div className={containerStyle}>
           <div className="flex-1 flex justify-center items-center">
-            <Image src={aboutus} alt="about us" />
+            <Image src={mascot} alt="about us" />
           </div>
 
           <div className="flex-1 flex flex-col justify-center gap-10 max-md:gap-[5px] ">
-            <h2 className="text-[48px] text-[#333333] leading-[48px] font-medium max-md:text-[20px]">
+            <h2 className="text-[48px] text-[#C92842] leading-[48px] font-medium max-md:text-[25px]">
               Get To Know Us.
             </h2>
 
@@ -151,7 +151,7 @@ export default function Home() {
 
         {/* vision container */}
         <div
-          className={`mt-10 w-[90%] flex flex-1 justify-center items-center flex-col min-h-[300px]`}
+          className={`mt-10 w-[90%] flex flex-1 justify-center items-center flex-col min-h-[300px] max-md:justify-start max-md:mt-0`}
           style={{
             backgroundImage: `url('${vision.src}')`,
             backgroundSize: "100%",
@@ -170,7 +170,7 @@ export default function Home() {
         </div>
 
         {/* events container */}
-        <div className="flex flex-1 w-[100%] container bg-[#c92842] gap-8 flex-col p-5 mx-5 justify-center items-center">
+        <div className="flex flex-1 w-[100%] bg-[#c92842] gap-8 flex-col p-5 mx-5 justify-center items-center">
           <h2 className="font-medium text-[48px] leading-[48px] text-[#E5E5E5] text-start ">
             Upcoming Events
           </h2>

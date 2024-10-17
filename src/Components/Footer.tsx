@@ -6,7 +6,7 @@ import Image from 'next/image'
 const Footer = () => {
     return (
         <div
-            className='w-[100%] flex flex-1 justify-center items-center p-6 bg-footer-bg rounded-t-md mb-0 max-md:rounded-none'
+            className='w-[100%] flex flex-1 justify-center items-center p-6 bg-footer-bg rounded-t-md mb-0 max-md:rounded-none bg-black'
         >
             <div
                 className='mx-20 my-10 mb-2 flex flex-1 justify-center flex-col items-center gap-10'

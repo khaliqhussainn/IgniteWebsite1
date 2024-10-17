@@ -69,7 +69,8 @@ function Team() {
               </div>
               <div className="mainteam-card_content">
                 <h2 className="mainteam-card_title">GRAPHIC DESIGNING BOARD</h2>
-                <Link href="/graphic">
+                {/* <Link href="/graphic"> */}
+                <Link href="/">
                   <button className="mainteam-btn mainteam-card_mainteam-btn">
                     Meet Our Team Members
                   </button>
@@ -86,7 +87,8 @@ function Team() {
                 <h2 className="mainteam-card_title">
                   THEATRE AND DRAMATIC BOARD
                 </h2>
-                <Link href="/theatre">
+                {/* <Link href="/theatre"> */}
+                <Link href="/">
                   <button className="mainteam-btn mainteam-card_mainteam-btn">
                     Meet Our Team Members
                   </button>
@@ -133,7 +135,8 @@ function Team() {
               <div className="mainteam-card_content">
                 <h2 className="mainteam-card_title">CONTENT BOARD</h2>
 
-                <Link href="/content">
+                {/* <Link href="/content"> */}
+                <Link href="/">
                   <button className="mainteam-btn mainteam-card_mainteam-btn">
                     Meet Our Team Members
                   </button>

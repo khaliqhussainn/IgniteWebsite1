@@ -16,7 +16,8 @@ export const navbar = [
     },
     {
         name: 'mentors',
-        link: '/mentor',
+        // link: '/mentor',
+        link: '/',
         label: 'mentors'
     },
     {
@@ -34,11 +35,11 @@ export const navbar = [
         link: '/contact',
         label: 'contact us'
     },
-    {
-        name: 'login',
-        link: '/auth',
-        label: 'login'
-    },
+    // {
+    //     name: 'login',
+    //     link: '/auth',
+    //     label: 'login'
+    // },
 ]
 
 export const login = [
